@@ -1,0 +1,23 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card-body">
+                <form action="/update/<%= data.id%>" method="post">
+                    <div class="form-group">
+                        <input type="text" name="Nombre" value="<%= data.Nombre %>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Genero" value="<%= data.Genero%>"  class="form-control">
+                    </div> 
+                    <button type="submit" class="btn btn-primary">
+                       Editar Pelicula
+                    </button> 
+             </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/_footer %>

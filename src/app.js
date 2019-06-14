@@ -24,6 +24,7 @@ app.use(myConnection(mysql, {
     port: 3306,
     database: 'dblaboratorio'
 }, 'single'));
+app.use(express.urlencoded({extended: false}));
 
 //rutas
 app.use('/',customerRoutes);

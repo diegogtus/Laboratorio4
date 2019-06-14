@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/',(req, res) => {
-    res.send('Hello world');
-});
+const customerController = require('../controllers/customerController')
+
+router.get('/', customerController.list);
+router.post('/add',customerController.save);
+router.get('/delete/:id', customerController.delete);
+
+router.get('/update/:id', customerController.edit);
+router.get('/update/:id', customerController.update);
 
 module.exports = router;
